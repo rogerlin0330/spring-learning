@@ -1,9 +1,8 @@
 # spring-learning
+
 My notes for learning Spring and Spring Boot.
 
-[TOC]
-
-## [Spring Ioc Container](./notes/Spring-IoC-Container/Spring-IoC-Container.md)
+[Spring Ioc Container](./notes/Spring-IoC-Container/Spring-IoC-Container.md)
 
 ---
 
