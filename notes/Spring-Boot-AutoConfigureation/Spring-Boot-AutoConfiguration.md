@@ -1,6 +1,6 @@
 # Spring Boot @EnableAutoConfiguration
 
-*In this section, we will discuss why Spring Boot can automatically configure beans for us with zero-configuration based on Spring Boot starters. Then we will discuss how to implement a basic Spring Boot starter.*
+_In this section, we will discuss why Spring Boot can automatically configure beans for us with zero-configuration based on Spring Boot starters. Then we will discuss how to implement a basic Spring Boot starter._
 
 ## How Spring Boot Automatically Configure Beans with Zero-Configuration?
 
@@ -77,7 +77,7 @@ public @interface EnableAutoConfiguration {
 }
 ```
 
-**During the container construction, Spring creates an instance for every `ImportSelector` based class being imported using `@Import(...)` in a JavaConfig class and invokes their `selectImport` method.**  The code of the selectImport method of `org.springframework.boot.autoconfigure.AutoConfigurationImportSelector` is shown below.
+**During the container construction, Spring creates an instance for every `ImportSelector` based class being imported using `@Import(...)` in a JavaConfig class and invokes their `selectImport` method.** The code of the selectImport method of `org.springframework.boot.autoconfigure.AutoConfigurationImportSelector` is shown below.
 
 ```java
 public class AutoConfigurationImportSelector implements DeferredImportSelector, BeanClassLoaderAware,
@@ -92,7 +92,7 @@ public class AutoConfigurationImportSelector implements DeferredImportSelector, 
         AutoConfigurationEntry autoConfigurationEntry = getAutoConfigurationEntry(annotationMetadata);
         return StringUtils.toStringArray(autoConfigurationEntry.getConfigurations());
     }
-    
+
     // ...
 
     protected AutoConfigurationEntry getAutoConfigurationEntry(AnnotationMetadata annotationMetadata) {
@@ -124,7 +124,7 @@ Now, one can easily infer from the assertion above that the `loadFactoryNames` m
 ```java
 public static List<String> loadFactoryNames(Class<?> factoryType, @Nullable ClassLoader classLoader) {
     // ...
-    
+
     return (List)loadSpringFactories(classLoaderToUse).getOrDefault(factoryTypeName, Collections.emptyList());
 }
 
@@ -182,7 +182,11 @@ The following two diagrams explains the whole procedure (The second digram is th
 
 ![What's Behind Spring Boot AutoConfiguration](./../../images/Spring-Boot-AutoConfiguration/Spring-Boot-AutoConfiguration.png)
 
+> _The Original Version of The Spring Boot Auto-Configuration Sequence Diagram_
+
 ![What's Behind Spring Boot AutoConfiguration (Annotated)](./../../images/Spring-Boot-AutoConfiguration/Spring-Boot-AutoConfiguration_annotated.png)
+
+> _The Annotated Version of The Spring Boot Auto-Configuration Sequence Diagram_
 
 ## How to Implement A Basic Spring Boot Starter?
 
