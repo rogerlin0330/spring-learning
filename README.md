@@ -4,7 +4,7 @@
 
 _This repo contains learning notes about the analysis of the source code of the **Spring Framework** and **Spring Boot**. I am trying to make the notes as easy to be understood as possible as I can, Therefore, I mainly organize the notes into diagrams combining with just some tiny code snippets in case for a clearer explanation._
 
-<p align="right" style="font-style: italic">Roger Lin, 04/15/2021, Los Angeles</p>
+_<p align="right">Roger Lin, 04/15/2021, Los Angeles</p>_
 
 ## Spring
 
