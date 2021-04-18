@@ -28,7 +28,7 @@ This section explains how Spring initializes the IoC container based on the foll
 
 The following sequence diagram shows the business logic of how Spring initializes an xml based ApplicationContext by letting Tomcat invoke the `initWebApplicationContext(servletContext:javax.servlet.ServletContext)` method contracted in the `javax.servlet.ServletContextListener` interface, and implemented in `org.springframework.web.context.ContextLoaderListener`.
 
-![ContextLoaderListner_to_BeanFactory](../../images/Spring-IoC-Container/ContextLoaderListner->XmlWebApplictionContext->BeanFactory.png)
+![ContextLoaderListener_to_BeanFactory](../../images/Spring-IoC-Container/ContextLoaderListener_XmlWebApplictionContext_BeanFactory.png)
 
 > _The Sequence Diagram from The Starting of The Tomcat Container to The `refresh` Method of `AbstractApplicationContext`_
 
